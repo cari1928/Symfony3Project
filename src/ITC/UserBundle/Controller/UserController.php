@@ -12,14 +12,9 @@ class UserController extends Controller
         $em = $this->getDoctrine()->getManager(); //para traer los objetos de la BD
         $users = $em->getRepository('ITCUserBundle:User')->findAll(); //trae todos los registros
         
-        // Para mostrar los datos
-        $res = 'Lista de usuarios: <br/>';
-        foreach ($users as $user) 
-        {
-            $res .= 'Usuario '.$user->getUserName()." - Email: ".$user->getEmail()."<br/>"; 
-        }
-    
-        return new Response($res);
+        // Renderizar hacia una vista
+        // Bundle:Directorio:Archivo
+        return $this->render('ITCUserBundle:User:index.html.twig', array('users'=>$users));
     }
     
     public function viewAction($id)
