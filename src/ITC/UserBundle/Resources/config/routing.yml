@@ -1,0 +1,29 @@
+itc_user_homepage:
+    path:     /
+    defaults: { _controller: ITCUserBundle:Default:index }
+    
+itc_user_index:
+    path:     /user/index
+    defaults: { _controller: ITCUserBundle:User:index } 
+    
+# itc_user_articles:
+#     path:     /user/articles/{page}
+#     defaults: { _controller: ITCUserBundle:User:articles, page: 1 }     
+#     requirements: 
+#         page: \d+
+
+itc_user_add:
+    path:     /user/add
+    defaults: { _controller: ITCUserBundle:User:add } 
+
+itc_user_edit:
+    path:     /user/edit/{id}
+    defaults: { _controller: ITCUserBundle:User:edit } 
+
+itc_user_view:
+    path:     /user/view/{id}
+    defaults: { _controller: ITCUserBundle:User:view } 
+
+itc_user_delete:
+    path:     /user/delete/{id}
+    defaults: { _controller: ITCUserBundle:User:delete } 
