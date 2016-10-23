@@ -1,0 +1,42 @@
+ITC\UserBundle\Entity\User:
+    type: entity
+    table: users
+    repositoryClass: ITC\UserBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        username:
+            type: string
+            length: '50'
+        firstName:
+            type: string
+            length: '100'
+            column: first_name
+        lastName:
+            type: string
+            length: '100'
+            column: last_name
+        email:
+            type: string
+            length: '100'
+        password:
+            type: string
+            length: 255
+        role:
+            type: string
+            columnDefinition: ENUM('ROLE_ADMIN', 'ROLE_USER')
+            length: '50'
+        isActive:
+            type: boolean
+            column: is_active
+        createdAt:
+            type: datetime
+            column: created_at
+        updatedAt:
+            type: datetime
+            column: updated_at
+    lifecycleCallbacks: {  }

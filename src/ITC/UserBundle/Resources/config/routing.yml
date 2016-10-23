@@ -6,12 +6,6 @@ itc_user_index:
     path:     /user/index
     defaults: { _controller: ITCUserBundle:User:index } 
     
-# itc_user_articles:
-#     path:     /user/articles/{page}
-#     defaults: { _controller: ITCUserBundle:User:articles, page: 1 }     
-#     requirements: 
-#         page: \d+
-
 itc_user_add:
     path:     /user/add
     defaults: { _controller: ITCUserBundle:User:add } 
@@ -21,6 +15,7 @@ itc_user_edit:
     defaults: { _controller: ITCUserBundle:User:edit } 
 
 itc_user_view:
+    # path:     /user/view/{nombre}
     path:     /user/view/{id}
     defaults: { _controller: ITCUserBundle:User:view } 
 
