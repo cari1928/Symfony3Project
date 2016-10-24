@@ -2,10 +2,12 @@
 
 namespace ITC\UserBundle\Entity;
 
+use Symfony\Component\Security\Core\User\UserInterface;
+
 /**
  * User
  */
-class User
+class User implements UserInterface
 {
     /**
      * @var int
@@ -282,6 +284,40 @@ class User
     public function getUpdatedAt()
     {
         return $this->updatedAt;
+    }
+    
+    public function setCreatedAtValue()
+    {
+        $this->createdAt = new \DateTime();
+    }
+    
+    public function setUpdatedAtValue()
+    {
+        $this->updatedAt = new \DateTime();
+    }
+    
+    /*
+     * implementado por la clase UserInterface
+     */
+    public function getRoles() 
+    {
+        
+    }
+    
+    /*
+     * implementado por la clase UserInterface
+     */
+    public function getSalt() 
+    {
+        
+    }
+    
+    /*
+     * implementado por la clase UserInterface
+     */
+    public function eraseCredentials() 
+    {
+        
     }
 }
 

@@ -6,9 +6,14 @@ itc_user_index:
     path:     /user/index
     defaults: { _controller: ITCUserBundle:User:index } 
     
+itc_user_create:
+    path:     /user/create
+    defaults: { _controller: ITCUserBundle:User:create } 
+    methods: POST
+    
 itc_user_add:
     path:     /user/add
-    defaults: { _controller: ITCUserBundle:User:add } 
+    defaults: { _controller: ITCUserBundle:User:add }    
 
 itc_user_edit:
     path:     /user/edit/{id}

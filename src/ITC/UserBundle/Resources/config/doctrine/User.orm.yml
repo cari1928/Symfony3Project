@@ -39,4 +39,6 @@ ITC\UserBundle\Entity\User:
         updatedAt:
             type: datetime
             column: updated_at
-    lifecycleCallbacks: {  }
+    lifecycleCallbacks: 
+        prePersist: [setCreatedAtValue, setUpdatedAtValue]
+        preUpdate: [setUpdatedAtValue]
